@@ -1,0 +1,16 @@
+{% extends 'layouts/baseRT.html' %}
+
+{% block contenidoRT %}
+
+    <div class="contenedor mt-5">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_div }}
+
+            <button>
+                Ejecutar
+            </button>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'layouts/baseRT.html' %}
+
+{% load static %}
+
+{% block contenidoRT %}
+
+<div class="contenedor mt-5">
+    <h2>Proyecto de programación paralela y concurrente</h2>
+
+    <p>Integrantes del equipo:</p>
+    <ul>
+        <li>Abreu</li>
+        <li>Galvan Alvarez Diego</li>
+        <li>Meza C. Guadalupe</li>
+    </ul>
+
+</div>
+
+<div class="contenedor mt-5">
+    <h2>Sobre Ray Tracing</h2>
+
+    <p class="justify-text">
+        Ray tracing, también conocido como trazado de rayos, es una técnica utilizada en gráficos por computadora para renderizar imágenes o generar efectos visuales. El objetivo principal del ray tracing es simular el comportamiento de la luz en el mundo real y cómo interactúa con los objetos para generar imágenes realistas.
+    </p>
+
+    <p> class="justify-text"
+        En el proceso de ray tracing, se sigue el camino de los rayos de luz desde la fuente de luz hasta el ojo del observador (o la cámara) a medida que interactúan con los objetos en la escena. Cada rayo de luz se lanza desde el ojo a través de cada píxel de la imagen y se rastrea su trayectoria a medida que interactúa con los objetos de la escena.
+    </p>
+
+    <p class="justify-text">
+        Cuando un rayo de luz alcanza un objeto, se pueden aplicar varias interacciones, como reflexión, refracción y sombreado, dependiendo de las propiedades del material del objeto. Por ejemplo, un rayo de luz puede rebotar en una superficie reflectante y luego ser absorbido o dispersado por otro objeto en la escena. Estas interacciones se calculan matemáticamente utilizando algoritmos de ray tracing.
+    </p>
+
+    <p class="justify-text">
+        El proceso de ray tracing puede ser computacionalmente intensivo, ya que implica el cálculo de múltiples trayectorias de rayos de luz y la simulación de interacciones complejas con los objetos de la escena. Sin embargo, a medida que aumenta la potencia de cálculo de las computadoras, el ray tracing se ha vuelto más accesible y se utiliza ampliamente en aplicaciones de gráficos por computadora, como videojuegos, películas de animación y efectos visuales.
+    </p>
+
+    <p class="justify-text">
+        El ray tracing permite generar imágenes con un alto nivel de realismo y calidad visual, ya que puede simular con precisión los efectos de iluminación global, las sombras suaves, los reflejos y las refracciones. Esto ha llevado a su creciente adopción en la industria del entretenimiento y a la mejora de la calidad visual en las producciones digitales.
+    </p>
+
+    <div class="imagenes mt-5">
+        <div class="imagenes__contenedor">
+            <img class="imagenes__imagen" src="{% static 'img/img1.jpeg' %}" alt="imagen1">
+        </div>
+
+        <div class="imagenes__contenedor">
+            <img class="imagenes__imagen" src="{% static 'img/img2.jpeg' %}" alt="imagen1">
+        </div>
+    </div>
+
+</div>
+
+<div class="contenedor mt-5">
+    <h2>Objetivo del proyecto</h2>
+
+    <p class="justify-text">
+        El objetivo de este proyecto es utilizar los conocimientos adquiridos en la materia para optimizar los tiempos de ejecución del programa de ray tracing. Para lograrlo, aprovecharemos el uso de hilos y conceptos de concurrencia. Además, en la página se implementarán funciones asíncronas para mejorar la eficiencia en determinadas tareas.
+    </p>
+
+</div>
+
+<div class="footer contenedor mt-5">
+    <footer style="padding: 30px;">
+        <p>&copy; 2023 Proyecto Final de Programación Paralela y Concurrente</p>
+    </footer>
+      
+</div>
+
+{% endblock %}

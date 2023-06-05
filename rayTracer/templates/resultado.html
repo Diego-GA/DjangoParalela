@@ -1,0 +1,24 @@
+{% extends 'layouts/baseRT.html' %}
+
+{% block contenidoRT %}
+
+<div class="contenedor">
+    <h1>Datos ingresados:</h1>
+    <p>Número de Hilos: {{ ray_tracer_data.numero_hilos }}</p>
+    <p>Numerador de Proporción: {{ ray_tracer_data.numerador_proporcion }}</p>
+    <p>Denominador de Proporción: {{ ray_tracer_data.denominador_proporcion }}</p>
+    <p>Ancho de la Imagen: {{ ray_tracer_data.ancho_imagen }}</p>
+    <p>Muestras por Pixel: {{ ray_tracer_data.muestras_por_pixel }}</p>
+    <p>Numerador Máximo de Rayos: {{ ray_tracer_data.numerador_max_rayos }}</p>
+    <p>Coordenada X: {{ ray_tracer_data.coordenada_x }}</p>
+    <p>Coordenada Y: {{ ray_tracer_data.coordenada_y }}</p>
+    <p>Coordenada Z: {{ ray_tracer_data.coordenada_z }}</p>
+    <p>Valor R Esfera 1: {{ ray_tracer_data.valor_R_esfera1 }}</p>
+    <p>Valor G Esfera 1: {{ ray_tracer_data.valor_G_esfera1 }}</p>
+    <p>Valor B Esfera 1: {{ ray_tracer_data.valor_B_esfera1 }}</p>
+    <p>Valor R Esfera 2: {{ ray_tracer_data.valor_R_esfera2 }}</p>
+    <p>Valor G Esfera 2: {{ ray_tracer_data.valor_G_esfera2 }}</p>
+    <p>Valor B Esfera 2: {{ ray_tracer_data.valor_B_esfera2 }}</p>
+    <p>Índice de Refracción: {{ ray_tracer_data.indice_refraccion }}</p>
+</div>
+{% endblock %}
