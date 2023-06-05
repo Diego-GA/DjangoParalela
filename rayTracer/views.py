@@ -101,3 +101,9 @@ def resultado(request):
     ray_tracer_data = RayTracerData.objects.last()  # Obtener el último objeto guardado en la base de datos
 
     return render(request, 'resultado.html', {'ray_tracer_data': ray_tracer_data})
+
+def desbloquear_seccion(request):
+    # Lógica para obtener o generar el contenido de la sección desbloqueada
+    contenido = "Ya puedes comenzar :D"
+
+    return HttpResponse(contenido)

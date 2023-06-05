@@ -3,6 +3,23 @@
 {% block contenidoRT %}
 
     <div class="contenedor mt-5">
+        <h3>Lee las instrucciones antes de comenzar</h3>
+        
+        <p class="justify-text">
+            Vas a ingresar el numero de hilos como entero. Para la proporción necesitamos un racional, para ello vas a escribbir el numerador y el denominador en dos campos separados. 
+            El ancho de la imagen como entero. Muestras por pixel como entero. UN entero como numero máximo de rayos. Coordenadas X, Y y Z como numeros double. 
+            Acontinuación los colores RBG de dos esferas, cada campos es para el valor ,r,g o b de la primera esfera y luego el de la segunda. 
+            Para acabar el indice de refraccion como un dato double
+        </p>
+
+        <button id="boton-desbloquear">¡Entendido! Comenzar</button>
+    </div>
+
+
+    <div class="contenedor mt-5" id="seccion-desbloqueada" style="display: none;">
+
+        <b> <p id="respuesta_asc"></p> </b>
+
         <form method="POST">
             {% csrf_token %}
             {{ form.as_div }}
@@ -12,5 +29,18 @@
             </button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('boton-desbloquear').addEventListener('click', function() {
+            fetch('/ray_Tracer/desbloquear-seccion/')
+                .then(response => response.text())
+                .then(data => {
+                    const paragraph = document.getElementById('respuesta_asc');
+                    paragraph.textContent = data;
+                    document.getElementById('seccion-desbloqueada').style.display = 'block';
+                });
+        });
+
+    </script>
 
 {% endblock %}
